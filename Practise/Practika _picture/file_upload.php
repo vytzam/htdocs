@@ -1,6 +1,6 @@
 <?php
 if (isset($_FILES['pictureToUpload'])){
-    $targetDir = "../uploads"; 
+    $targetDir = "pictures/"; 
     var_dump($_FILES);
     $targetFile = $targetDir.basename($_FILES['pictureToUpload']['name']); //nera failo 
     echo $targetFile;
@@ -58,5 +58,5 @@ if($uploadValid == 0){
 
 
 <?php
-include '../layout/footer.php';
+include 'layout/footer.php';
 ?>
