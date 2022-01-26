@@ -41,4 +41,3 @@ if ($_GET) {
 </div>
 
 <?php include 'layout/footer.php' ?>
-
