@@ -49,7 +49,7 @@
                     <a href="#" class="nav-link">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Register</a>
+                    <a href="/Sample_system/views/register2.php" class="nav-link">Register</a>
                 </li>
             </ul>
 
