@@ -17,11 +17,11 @@ if($password == $confirmPassword){
     $password = password_hash($password, PASSWORD_DEFAULT);
     //echo $password;
 } else {
-    header("Location: ../../sample_system/?username=".$username."&email=".$email."&error=Passwords+do+not+match");
+    header("Location: ../../twiter/?username=".$username."&email=".$email."&error=Passwords+do+not+match");
     //header("Location: ../sample_system/?error=Passwords+do+not+match");
     exit;
 }
 
-header("Location: ../../sample_system/views/welcome.php?username=".$username);
+header("Location: ../../twiter/views/welcome.php?username=".$username);
 
 ?>
