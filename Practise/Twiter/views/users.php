@@ -1,21 +1,21 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION['username'])){
+if (!isset($_SESSION['username'])) {
     header("Location: login.php");
 }
 include '../layout/header.php';
 require_once '../db_connection.php';
 
-try{
+try {
     $sql = "SELECT * FROM users";
     $query = $conn->prepare($sql);
     $query->execute();
     $result = $query->fetchAll();
 } catch (PDOException $e) {
-    echo "Select failed: ". $e->getMessage();
+    echo "Select failed: " . $e->getMessage();
 }
-$useronline=$_SESSION['username'];
-$role=$_SESSION['role'];
+$useronline = $_SESSION['username'];
+$role = $_SESSION['role'];
 
 ?>
 <div class="container py-4">
@@ -40,27 +40,24 @@ $role=$_SESSION['role'];
 
                         </tr>
                         <?php
-                             foreach($result as $user){
-                                if ($useronline==$user['first_name']){
-                                    $visibility="visible";}
-                                elseif($role==1){
-                                    $visibility="visible";
+                        foreach ($result as $user) {
+                            if ($useronline == $user['first_name']) {
+                                $visibility = "visible";
+                            } elseif ($role == 1) {
+                                $visibility = "visible";
+                            } else {
+                                $visibility = "invisible";
+                            }
 
-                                }
-                                 else{
-                                    $visibility="invisible";
-                                 }
+                            echo "<tr><td>" . $user['user_name'] . "</td><td>" . $user['first_name'] . "</td><td>" . $user['last_name'] . "</td><td>" . $user['email'] . "</td><td>" . $user['created'] . "</td>.
 
-                                            echo "<tr><td>".$user['user_name']."</td><td>".$user['first_name']."</td><td>".$user['last_name']."</td><td>".$user['email']."</td><td>".$user['created']."</td>.
-
-                                            <td>".$user['updated']."</td><td><a class='btn btn-warning $visibility'href='user_edit.php?userid=".$user['id']."'>Edit</a><a class='btn btn-danger ml-2 $visibility'href='../scripts/user_delete.php?userid=".$user['id']."'>Delete</a></td</tr>";
-                
+                                            <td>" . $user['updated'] . "</td><td><a class='btn btn-warning $visibility'href='user_edit.php?userid=" . $user['id'] . "'>Edit</a><a class='btn btn-danger ml-2 $visibility'href='../scripts/user_delete.php?userid=" . $user['id'] . "'>Delete</a></td</tr>";
                         }
                         ?>
                     </table>
                 </div>
                 <div class="card-footer text-muted">
-                    
+
                 </div>
             </div>
         </div>

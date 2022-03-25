@@ -47,7 +47,6 @@ if (isset($_FILES['pictureToUpload'])) {
             echo "Error occured, please try again";
         }
     }
-
 }
 
 ?>

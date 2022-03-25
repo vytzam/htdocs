@@ -8,8 +8,8 @@ include '../layout/header.php' ?>
             <div class="card bg-light mb-8">
                 <div class="card-header">Sign Up</div>
                 <div class="card-body">
-                   <form action="..\scripts\signUp2.php" method="POST" enctype="multipart/form-data">
-                   <div class="form-group">
+                    <form action="..\scripts\signUp2.php" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
                             <input type="text" class="form-control" placeholder="Nick name " name="uname">
                         </div>
                         <div class="form-group">
@@ -32,7 +32,7 @@ include '../layout/header.php' ?>
                             <input type="file" class="form-control-file" name="avatar">
                         </div> -->
                         <button type="submit" class="btn btn-primary">Submit</button>
-                   </form>
+                    </form>
                 </div>
             </div>
         </div>

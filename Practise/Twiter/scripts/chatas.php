@@ -24,4 +24,3 @@ if($_POST){
     }
 
 header("Location:../views/chat.php")
-?>

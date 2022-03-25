@@ -23,5 +23,3 @@ if($password == $confirmPassword){
 }
 
 header("Location: ../../twiter/views/welcome.php?username=".$username);
-
-?>

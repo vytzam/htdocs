@@ -74,7 +74,7 @@ try {
     echo "Select failed: " . $e->getMessage();
 }
 $useronline = $_SESSION['username'];
-$role=$_SESSION['role'];
+$role = $_SESSION['role'];
 ?>
 <div class="card-body">
     <h5 class="card-title">Chat</h5>

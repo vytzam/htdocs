@@ -25,6 +25,3 @@ if($_GET){
 }else {
         header("Location: ../");
     }
-
-
-?>

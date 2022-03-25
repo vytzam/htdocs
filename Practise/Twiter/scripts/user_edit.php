@@ -31,6 +31,3 @@ if($_POST){
 }else {
         header("Location: ../");
     }
-
-
-?>

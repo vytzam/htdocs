@@ -37,5 +37,3 @@ if ($result){
 } else {
     echo "Email does not exist";
 }
-
-?>
