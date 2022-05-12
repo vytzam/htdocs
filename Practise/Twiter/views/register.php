@@ -1,12 +1,26 @@
 <?php
+session_start();
+include '../layout/header.php'; 
 
-include '../layout/header.php' ?>
+
+?>
+
 
 <div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card bg-light mb-8">
                 <div class="card-header">Sign Up</div>
+                <div class="container py-4">
+ <ul>                   
+<?php
+
+if (isset($_SESSION['reg_errors'])) {
+    foreach ($_SESSION['reg_errors'] as $error) {
+        echo "<li class ='text-danger'>$error</li>";
+
+    }
+    $_SESSION['reg_errors'] = [];}?></ul></div>
                 <div class="card-body">
                     <form action="..\scripts\signUp2.php" method="POST" enctype="multipart/form-data">
                         <div class="form-group">

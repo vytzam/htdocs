@@ -23,4 +23,4 @@ if($_POST){
         header("Location: ../");
     }
 
-header("Location:../views/chat.php")
+header("Location:../views/chat.php");
